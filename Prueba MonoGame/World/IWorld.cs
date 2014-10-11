@@ -9,6 +9,6 @@ namespace Prueba_MonoGame.World
     {
         int getLevel();
         string getName();
-        List<Entities.IWorldItem> getItems();
+        List<Blocks.IBlock> getItems();
     }
 }

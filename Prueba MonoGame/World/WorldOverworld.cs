@@ -8,7 +8,7 @@ namespace Prueba_MonoGame.World
     public class WorldOverworld : IWorld
     {
 
-        private List<World.Entities.IWorldItem> items = new List<Entities.IWorldItem>();
+        private List<Blocks.IBlock> blocks = new List<Blocks.IBlock>();
 
         int IWorld.getLevel()
         {
@@ -20,9 +20,9 @@ namespace Prueba_MonoGame.World
             return "Overworld";
         }
 
-        public List<Entities.IWorldItem> getItems()
+        public List<Blocks.IBlock> getItems()
         {
-            return this.items;
+            return this.blocks;
         }
 
     }
