@@ -11,9 +11,17 @@ using Microsoft.Xna.Framework.GamerServices;
 
 namespace Prueba_MonoGame.World.Blocks
 {
-    public interface IBlock
+    class BlockTest : IBlock
     {
-        Texture2D getTexture();
-        Vector2 getPos();
+        Texture2D IBlock.getTexture()
+        {
+            return Game1.contentMgr.Load<Texture2D>("Gore_54");
+        }
+
+        Vector2 IBlock.getPos()
+        {
+            return new Vector2(0, 0);
+        }
+
     }
 }
