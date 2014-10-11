@@ -7,6 +7,6 @@ namespace Prueba_MonoGame.Scenes
 {
     interface ISceneElement
     {
-
+        
     }
 }

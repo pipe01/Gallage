@@ -17,7 +17,7 @@ namespace Prueba_MonoGame.World
             return "Overworld";
         }
 
-        List<Entities.IEntity> getEntities()
+        public List<Entities.IEntity> getEntities()
         {
             return null;
         }
