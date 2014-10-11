@@ -61,9 +61,9 @@ namespace Prueba_MonoGame.Scenes
                 spriteBatch.Draw(item.getFinal(), item.getBounds(), Color.White);
             }
 
-            foreach (World.Entities.IWorldItem item in this.world.getItems())
+            foreach (World.Blocks.IBlock item in this.world.getBlocks())
             {
-                spriteBatch.Draw(item.getTexture(), item.getBounds(), Color.White);
+                spriteBatch.Draw(item.getTexture(), new Rectangle((int)item.getPos().X, (int)item.getPos().Y, 24, 24), Color.White);
             }
 
             spriteBatch.End();

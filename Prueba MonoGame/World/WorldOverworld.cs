@@ -20,8 +20,9 @@ namespace Prueba_MonoGame.World
             return "Overworld";
         }
 
-        public List<Blocks.IBlock> getItems()
+        public List<Blocks.IBlock> getBlocks()
         {
+            blocks.Add(new Blocks.BlockTest());
             return this.blocks;
         }
 

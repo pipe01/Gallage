@@ -14,7 +14,6 @@ namespace Prueba_MonoGame.World.Entities.Player
     class Player : IWorldItem
     {
 
-        private Vector2 pos;
         private Rectangle bounds;
 
         string IWorldItem.getName()
