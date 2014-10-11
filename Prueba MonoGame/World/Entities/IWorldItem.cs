@@ -11,12 +11,11 @@ using Microsoft.Xna.Framework.GamerServices;
 
 namespace Prueba_MonoGame.World.Entities
 {
-    public interface IEntity
+    public interface IWorldItem
     {
         string getName();
-        Vector2 getPos();
-        void setPos(Vector2 pos);
-        void addPos(Vector2 add);
+        Rectangle getBounds();
+        void setBounds(Rectangle pos);
         Texture2D getTexture();
         void Update();
     }

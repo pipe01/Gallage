@@ -20,9 +20,11 @@ namespace Prueba_MonoGame.Scenes
         private SpriteBatch spriteBatch;
         private ContentManager content;
         private GraphicsDevice graphics;
-        private WorldOverworld world;
+        private IWorld world;
 
         private Texture2D sprite;
+
+        private List<ISceneElement> elements = new List<ISceneElement>();
 
         public SceneInGame(SpriteBatch spriteBatch, ContentManager content, GraphicsDevice graphics)
         {
@@ -54,14 +56,22 @@ namespace Prueba_MonoGame.Scenes
 
             spriteBatch.Begin();
 
-            // TODO Añadir codigo de dibujo 'SceneInGame:Draw'
+            foreach (ISceneElement item in this.elements)
+            {
+                spriteBatch.Draw(item.getFinal(), item.getBounds(), Color.White);
+            }
+
+            foreach (World.Entities.IWorldItem item in this.world.getItems())
+            {
+                spriteBatch.Draw(item.getTexture(), item.getBounds(), Color.White);
+            }
 
             spriteBatch.End();
         }
 
-        List<IEntity> IScene.getElements()
+        List<IWorldItem> IScene.getElements()
         {
-            // TODO Añadir return 'SceneInGame:getElements'
+            // TODO 2 Añadir return 'SceneInGame:getElements'
             return null;
         }
         IWorld IScene.getWorld(int level)

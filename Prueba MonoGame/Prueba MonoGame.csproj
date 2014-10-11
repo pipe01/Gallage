@@ -43,7 +43,8 @@
     <Compile Include="Scenes\ISceneElement.cs" />
     <Compile Include="Scenes\SceneInGame.cs" />
     <Compile Include="Scenes\SceneManager.cs" />
-    <Compile Include="World\Entities\IEntity.cs" />
+    <Compile Include="World\Blocks\IBlock.cs" />
+    <Compile Include="World\Entities\IWorldItem.cs" />
     <Compile Include="World\Entities\Player\Player.cs" />
     <Compile Include="World\IWorld.cs" />
     <Compile Include="World\WorldOverworld.cs" />

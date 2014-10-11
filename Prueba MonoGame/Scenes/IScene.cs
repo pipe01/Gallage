@@ -21,7 +21,7 @@ namespace Prueba_MonoGame.Scenes
         void UnloadContent();
         void Update(GameTime gameTime);
         void Draw(GameTime gameTime);
-        List<IEntity> getElements();
+        List<IWorldItem> getElements();
         IWorld getWorld(int level);
     }
 }

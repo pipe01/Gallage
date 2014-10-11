@@ -11,33 +11,29 @@ using Microsoft.Xna.Framework.GamerServices;
 
 namespace Prueba_MonoGame.World.Entities.Player
 {
-    class Player : IEntity
+    class Player : IWorldItem
     {
 
         private Vector2 pos;
+        private Rectangle bounds;
 
-        string IEntity.getName()
+        string IWorldItem.getName()
         {
             return "Player";
         }
-        Vector2 IEntity.getPos()
+        Rectangle IWorldItem.getBounds()
         {
-            return this.pos;
+            return this.bounds;
         }
-        void IEntity.setPos(Vector2 pos)
+        void IWorldItem.setBounds(Rectangle bounds)
         {
-            this.pos = pos;
+            this.bounds = bounds;
         }
-        void IEntity.addPos(Vector2 add)
-        {
-            this.pos.X += add.X;
-            this.pos.Y += add.Y;
-        }
-        Texture2D IEntity.getTexture()
+        Texture2D IWorldItem.getTexture()
         {
             return Game1.contentMgr.Load<Texture2D>("Gore_54");
         }
-        void IEntity.Update()
+        void IWorldItem.Update()
         {
             
         }
