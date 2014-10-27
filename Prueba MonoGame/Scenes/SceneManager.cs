@@ -19,10 +19,6 @@ namespace Prueba_MonoGame.Scenes
 
         public void switchScene(string sceneID)
         {
-            /*foreach (IScene item in scenes.Values)
-            {
-                item.setSpriteBatch(spriteBatch);
-            }*/
             activeScene = scenes[sceneID];
         }
 

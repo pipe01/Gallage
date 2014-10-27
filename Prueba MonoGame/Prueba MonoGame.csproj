@@ -42,19 +42,23 @@
     <Compile Include="Scenes\IScene.cs" />
     <Compile Include="Scenes\ISceneElement.cs" />
     <Compile Include="Scenes\SceneInGame.cs" />
+    <Compile Include="Scenes\SceneMainMenu.cs" />
     <Compile Include="Scenes\SceneManager.cs" />
     <Compile Include="World\Blocks\BlockTest.cs" />
     <Compile Include="World\Blocks\IBlock.cs" />
     <Compile Include="World\Entities\IWorldItem.cs" />
     <Compile Include="World\Entities\Player\Player.cs" />
     <Compile Include="World\IWorld.cs" />
+    <Compile Include="World\WorldCustom.cs" />
     <Compile Include="World\WorldOverworld.cs" />
+    <Compile Include="World\WorldSerial.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>

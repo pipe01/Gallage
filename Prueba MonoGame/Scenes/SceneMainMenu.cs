@@ -14,7 +14,7 @@ using Prueba_MonoGame.World;
 
 namespace Prueba_MonoGame.Scenes
 {
-    public class SceneInGame : IScene
+    public class SceneMainMenu : IScene
     {
 
         private SpriteBatch spriteBatch;
@@ -26,7 +26,7 @@ namespace Prueba_MonoGame.Scenes
 
         private List<ISceneElement> elements = new List<ISceneElement>();
 
-        public SceneInGame(SpriteBatch spriteBatch, ContentManager content, GraphicsDevice graphics)
+        public SceneMainMenu(SpriteBatch spriteBatch, ContentManager content, GraphicsDevice graphics)
         {
             this.spriteBatch = spriteBatch;
             this.content = content;
@@ -35,14 +35,11 @@ namespace Prueba_MonoGame.Scenes
 
         void IScene.Initialize()
         {
-            
+
         }
         void IScene.LoadContent()
         {
-            this.sprite = content.Load<Texture2D>("Gore_54");
-            world = new WorldOverworld();
-            bool ret = World.WorldSerial.WriteToFile(world, "prueba");
-            if (!ret) Global.throwError("difghfiuhggf", 666);
+            
         }
         void IScene.UnloadContent()
         {
@@ -63,11 +60,6 @@ namespace Prueba_MonoGame.Scenes
                 spriteBatch.Draw(item.getFinal(), item.getBounds(), Color.White);
             }
 
-            foreach (World.Blocks.IBlock item in this.world.getBlocks())
-            {
-                spriteBatch.Draw(item.getTexture(), new Rectangle((int)item.getPos().X, (int)item.getPos().Y, 24, 24), Color.White);
-            }
-
             spriteBatch.End();
         }
 
@@ -78,7 +70,7 @@ namespace Prueba_MonoGame.Scenes
         }
         IWorld IScene.getWorld(int level)
         {
-            return (IWorld) world;
+            return (IWorld)world;
         }
 
     }

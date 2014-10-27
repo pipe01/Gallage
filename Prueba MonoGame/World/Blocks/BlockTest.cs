@@ -23,5 +23,10 @@ namespace Prueba_MonoGame.World.Blocks
             return new Vector2(0, 0);
         }
 
+        int IBlock.getID()
+        {
+            return 23;
+        }
+
     }
 }

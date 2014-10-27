@@ -13,6 +13,7 @@ namespace Prueba_MonoGame.World.Blocks
 {
     public interface IBlock
     {
+        int getID();
         Texture2D getTexture();
         Vector2 getPos();
     }
