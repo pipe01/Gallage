@@ -16,6 +16,8 @@ namespace Prueba_MonoGame
     {
         public static Scenes.SceneManager sceneMgr;
 
+        public static World.Blocks.BlockRegister blockReg = new World.Blocks.BlockRegister();
+
         public static SpriteBatch spriteBatch;
 
         public static void throwError(string desc, int id)

@@ -44,6 +44,7 @@
     <Compile Include="Scenes\SceneInGame.cs" />
     <Compile Include="Scenes\SceneMainMenu.cs" />
     <Compile Include="Scenes\SceneManager.cs" />
+    <Compile Include="World\Blocks\BlockRegister.cs" />
     <Compile Include="World\Blocks\BlockTest.cs" />
     <Compile Include="World\Blocks\IBlock.cs" />
     <Compile Include="World\Entities\IWorldItem.cs" />
